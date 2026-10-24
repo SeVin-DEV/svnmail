@@ -2,7 +2,7 @@
 
 Android multi-account webmail client (`com.svndev.svnmail`).
 
-- IMAP SSL: imap.nevtan.com:993
+- IMAP SSL: smtp.nevtan.com:993 (same host as SMTP; imap.nevtan.com does not exist)
 - SMTP SSL: smtp.nevtan.com:465
 - Multi-account SQLite + foreground poll / notifications
 - AGP 8.1.4 · compileSdk 34 · minSdk 24

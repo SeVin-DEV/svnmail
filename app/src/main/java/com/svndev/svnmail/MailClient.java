@@ -16,7 +16,9 @@ import javax.mail.internet.MimeMessage;
 
 public class MailClient {
 
-    public static final String IMAP_HOST = "imap.nevtan.com";
+    // NevTan serves IMAP on the same host as SMTP. imap.nevtan.com does not
+    // resolve, and the TLS certificate only covers smtp.nevtan.com.
+    public static final String IMAP_HOST = "smtp.nevtan.com";
     public static final int IMAP_PORT = 993;
     public static final String SMTP_HOST = "smtp.nevtan.com";
     public static final int SMTP_PORT = 465;
