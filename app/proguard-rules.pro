@@ -1,0 +1,4 @@
+-dontwarn com.sun.mail.**
+-dontwarn javax.activation.**
+-dontwarn javax.mail.**
+-dontwarn org.apache.harmony.awt.**

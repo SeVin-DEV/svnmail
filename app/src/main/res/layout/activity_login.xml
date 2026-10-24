@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center_horizontal"
+    android:padding="24dp" android:background="@color/bg_deep">
+
+    <ImageView android:layout_width="72dp" android:layout_height="72dp"
+        android:src="@drawable/ic_launcher" android:contentDescription="@string/app_name"
+        android:layout_marginTop="48dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/app_name" android:textSize="26sp"
+        android:textStyle="bold" android:textColor="@color/text_main" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/tagline" android:textSize="13sp"
+        android:textColor="@color/text_dim" android:layout_marginBottom="28dp" />
+
+    <EditText android:id="@+id/etEmail" android:layout_width="match_parent"
+        android:layout_height="52dp" android:hint="Email Address"
+        android:inputType="textEmailAddress" android:textColor="@color/text_main"
+        android:textColorHint="@color/text_dim" android:paddingStart="16dp"
+        android:paddingEnd="16dp" android:background="@drawable/input_bg"
+        android:layout_marginBottom="14dp" android:autofillHints="emailAddress" />
+
+    <EditText android:id="@+id/etPassword" android:layout_width="match_parent"
+        android:layout_height="52dp" android:hint="Password"
+        android:inputType="textPassword" android:textColor="@color/text_main"
+        android:textColorHint="@color/text_dim" android:paddingStart="16dp"
+        android:paddingEnd="16dp" android:background="@drawable/input_bg"
+        android:layout_marginBottom="20dp" android:autofillHints="password" />
+
+    <Button android:id="@+id/btnSignIn" android:layout_width="match_parent"
+        android:layout_height="52dp" android:text="Sign In" android:textSize="16sp"
+        android:textColor="@color/text_main" android:background="@drawable/gradient_btn"
+        android:textAllCaps="false" />
+
+    <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/pink" android:visibility="gone" />
+
+    <TextView android:id="@+id/tvError" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textColor="#FF6B81"
+        android:layout_marginTop="14dp" android:visibility="gone" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Sign-in adds the account to this device.\nMultiple accounts are supported."
+        android:textSize="12sp" android:textColor="@color/text_dim"
+        android:gravity="center" android:layout_marginTop="26dp" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">svn-webmail</string>
+    <string name="tagline">Secure. Private. Yours.</string>
+    <string name="monitoring">Monitoring your inboxes</string>
+</resources>

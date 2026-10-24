@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:background="@drawable/card_bg"
+    android:padding="14dp" android:gravity="center_vertical">
+
+    <TextView android:id="@+id/tvFromAvatar" android:layout_width="42dp"
+        android:layout_height="42dp" android:gravity="center" android:textSize="16sp"
+        android:textStyle="bold" android:textColor="@color/text_main"
+        android:background="@drawable/avatar_circle" />
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical"
+        android:layout_marginStart="12dp" android:layout_marginEnd="8dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/tvFrom" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:textSize="14sp" android:textColor="@color/text_main"
+                android:singleLine="true" android:ellipsize="end" />
+            <TextView android:id="@+id/tvDate" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="@color/text_dim" android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvSubject" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="14sp"
+            android:textStyle="bold" android:textColor="@color/text_main"
+            android:singleLine="true" android:ellipsize="end" android:layout_marginTop="2dp" />
+
+        <TextView android:id="@+id/tvPreview" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="12sp"
+            android:textColor="@color/text_dim" android:singleLine="true"
+            android:ellipsize="end" android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <View android:id="@+id/dotUnread" android:layout_width="10dp"
+        android:layout_height="10dp" android:background="@drawable/dot_unread" />
+</LinearLayout>
