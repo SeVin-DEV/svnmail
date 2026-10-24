@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import javax.mail.Authenticator;
 import javax.mail.Folder;
+import javax.mail.UIDFolder;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -98,7 +99,7 @@ public class MailClient {
                 s.date = formatDate(m);
                 s.unread = !m.isSet(javax.mail.Flags.Flag.SEEN);
                 try {
-                    s.uid = folder.getUID(m);
+                    s.uid = ((UIDFolder) folder).getUID(m);
                 } catch (Exception ignored) {
                     s.uid = 0;
                 }
@@ -120,7 +121,7 @@ public class MailClient {
         store.connect();
         Folder folder = store.getFolder(folderName);
         folder.open(Folder.READ_WRITE);
-        Message m = folder.getMessageByUID(uid);
+        Message m = ((UIDFolder) folder).getMessageByUID(uid);
         String body;
         if (m == null) {
             body = "Message not found.";
@@ -159,7 +160,7 @@ public class MailClient {
         if (inbox.getMessageCount() > 0) {
             try {
                 Message last = inbox.getMessage(inbox.getMessageCount());
-                max = inbox.getUID(last);
+                max = ((UIDFolder) inbox).getUID(last);
             } catch (Exception ignored) {
             }
         }
